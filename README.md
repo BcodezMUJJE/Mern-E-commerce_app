@@ -1,26 +1,60 @@
-# react_basics_calculator
+MERN E-Commerce App using React
+This project is a simple MERN (MongoDB, Express, React, Node.js) e-commerce app using React for the frontend.
 
-Calculator app
-The purpose of this graded assessment
-The primary purpose of a graded assessment is to check your knowledge and understanding of the key learning objectives of the course you have just completed. Most importantly, graded assessments help you establish which topics you have mastered and which require further focus before completing the course. Ultimately, the graded assessment is designed to help you make sure that you can apply what you have learned. This assessment's learning objective is to allow you to create a React application or App.
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prepare for this graded assessment
-You will have already encountered exercises, knowledge checks, in-video questions and other assessments as you have progressed through the course. The 'styling a page' ungraded lab from Module 2 is the foundation for this assessment.
+Prerequisites
+Node.js and npm installed
+MongoDB installed
+Installing
+Clone the repository
+Edit
+Full Screen
+Copy code
+git clone https://github.com/your-username/mern-ecommerce.git
+Install the dependencies
+Edit
+Full Screen
+Copy code
+cd mern-ecommerce
+npm install
+Create a .env file in the root directory and add the following:
+Edit
+Full Screen
+Copy code
+MONGO_URI=mongodb://localhost:27017/mern-ecommerce
+JWT_SECRET=your-jwt-secret
+Start the application
+Edit
+Full Screen
+Copy code
+npm run dev
+Database Seed
+The seed command will create an admin user in the database
+The email and password are passed with the command as arguments
+Like below command, replace brackets with email and password.
+Edit
+Full Screen
+Copy code
+npm run seed:db [email-***@****.com] [password-******]
+Demo
+This application is deployed on Vercel. Please check it out here.
 
-The graded assessment requires you to complete a calculator in React. You will be provided with code snippets, and your task is to use these, plus any of your code to complete the calculator that can perform the four basic mathematical operations: addition, subtraction, multiplication, and division.
+See admin dashboard demo
 
-It will also have a single input button, which will accept user input (any number) and a total starting with a zero.
-
-Once a user types into the input field, they will then have to update the total by pressing any of the four math operation buttons:
-
-addition 
-
-subtraction 
-
-multiplication 
-
-division 
-
-Here's a diagram of the completed calculator app:
-
-Calculator App display with options for calculation and number entry field
+Building for Production
+Simple build for production
+Edit
+Full Screen
+Copy code
+npm run build
+Run build for production
+Edit
+Full Screen
+Copy code
+npm start
+Languages & Tools
+Node
+Express
+React
