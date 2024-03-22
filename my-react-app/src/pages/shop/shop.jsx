@@ -1,6 +1,7 @@
 import React from  "react";
 import { PRODUCTS } from '/workspaces/Mern-E-commerce_app/my-react-app/src/product.js';
 import { Product } from './product';
+import './shop.css';
 
 export const Shop = () => {
     return (
