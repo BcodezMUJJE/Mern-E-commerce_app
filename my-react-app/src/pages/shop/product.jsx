@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/shop_context";
 
-export const Product = ({ data }) => {
-    
-    // Destructure data object to access individual properties 
-    // eslint-disable-next-line 
-    const { id, productName, price, productImage } = data;
+export const Product = (props) => {
+  const { id, productName, price, productImage } = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
 
-    // Use the variables within the component if needed
-    return (
-        <div className='product'>
-            <img src={productImage} alt={productName} />
-            <div className='description'>
-                <p><b>{productName}</b></p>
-                <p>Price: ${price}</p>
-            </div>
-            <button className='addToCartBttn' onClick={() => addToCart(id)}>
-                Add to Cart {cartItemCount > 0 && <> ({cartItemCount}) </>}
-            </button>
-        </div>
-    );
+  const cartItemCount = cartItems[id];
+
+  return (
+    <div className="product">
+      <img src={productImage} />
+      <div className="description">
+        <p>
+          <b>{productName}</b>
+        </p>
+        <p> ${price}</p>
+      </div>
+      <button className="addToCartBttn" onClick={() => addToCart(id)}>
+        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+      </button>
+    </div>
+  );
 };
